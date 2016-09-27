@@ -116,13 +116,14 @@ public class TasksActivity extends AppCompatActivity {
                                 intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK
                                         | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                                 startActivity(intent);
+                                TasksActivity.this.overridePendingTransition(0,0);
                                 break;
                             default:
                                 break;
                         }
                         // Close the navigation drawer when an item is selected.
                         menuItem.setChecked(true);
-                        mDrawerLayout.closeDrawers();
+                        //mDrawerLayout.closeDrawers();
                         return true;
                     }
                 });

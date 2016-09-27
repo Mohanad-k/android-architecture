@@ -95,6 +95,7 @@ public class StatisticsActivity extends AppCompatActivity {
                                 intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK
                                         | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                                 startActivity(intent);
+                                StatisticsActivity.this.overridePendingTransition(0,0);
                                 break;
                             case R.id.statistics_navigation_menu_item:
                                 // Do nothing, we're already on that screen
@@ -104,7 +105,6 @@ public class StatisticsActivity extends AppCompatActivity {
                         }
                         // Close the navigation drawer when an item is selected.
                         menuItem.setChecked(true);
-                        mDrawerLayout.closeDrawers();
                         return true;
                     }
                 });
